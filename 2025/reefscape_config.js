@@ -12,7 +12,7 @@ var config_data = `
       "maxSize": 5,
       "required": "true"
     },
-    { "name": "Event",
+    { "name": "Event Code",
       "code": "e",
       "type": "event",
       "defaultValue": "2025ilpe",
@@ -85,7 +85,7 @@ var config_data = `
       "code": "ac1",
       "type": "counter"
     },
-    { "name": "Processor Score",
+    { "name": "Processor Scores",
       "code": "aps",
       "type": "counter"
     },
@@ -130,7 +130,7 @@ var config_data = `
       "code": "tc1",
       "type": "counter"
     },
-    { "name": "Processor Score",
+    { "name": "Processor Scores",
       "code": "tps",
       "type": "counter"
     },
@@ -162,16 +162,16 @@ var config_data = `
     }
   ],
   "endgame": [
-    { "name": "Climb Time",
+    { "name": "Time to Climb",
       "code": "ct",
       "type": "timer"
     },
-    { "name": "Did the team take extra to climb",
-    "code": "Did the team take extra to climb",
+    { "name": "More than 5s to Position Climb",
+    "code": "More than 5s to Position Climb",
     "type": "bool"
     },
-    { "name": "Was there extra time after a sucessful climb",
-    "code": "Was there extra time after a sucessful climb", 
+    { "name": "Time Left After Climbing?",
+    "code": "Time Left After Climbing", 
     "type": "bool"
     },
     { "name": "Final Robot Status",
@@ -179,7 +179,7 @@ var config_data = `
       "type":"radio",
       "choices": {
         "bp": "Parked<br>",
-        "ba": "Parked/Failed Climb<br>",
+        "ba": "Failed Climb<br>",
         "bs": "Shallow Cage<br>",
         "bd": "Deep Cage<br>",
         "x": "Not attempted"
@@ -188,12 +188,12 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Attained Coopertition Point",
+    { "name": "Gained CP?",
       "code": "cop",
       "type": "bool"
     },
-    {"name": "Spent at least half of the match playing defense",
-      "code": "RobotPlayedHeavyDefenseInMatch",
+    {"name": "Defense Bot?",
+      "code": "Defense Bot",
       "type": "bool"
     },
     { "name": "Defense Rating",
@@ -222,11 +222,11 @@ var config_data = `
       "code": "die",
       "type": "bool"
     },
-    { "name": "Tippy<br>(almost tipped over)",
-      "code": "tip",
+    { "name": "Unstable?",
+      "code": "Unstable",
       "type": "bool"
     },
-    { "name": "Were cages hit",
+    { "name": "Were cages hit?",
     "code": "Were cages hit",
     "type": "bool"
     },
