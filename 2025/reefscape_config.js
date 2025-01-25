@@ -155,7 +155,11 @@ var config_data = `
     { "name": "Algae Removed",
       "code": "AlgaeRemovedTeleop",
       "type": "counter"
-    }
+    },
+    { "name": "Coral Dropped",
+    "code": "Coral Dropped",
+    "type": "counter"
+    },
   ],
   "endgame": [
     { "name": "Climb Time",
@@ -222,9 +226,9 @@ var config_data = `
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Dropped Coral (>2)",
-      "code": "dc",
-      "type": "bool"
+    { "name": "Were cages hit",
+    "code": "Were cages hit",
+    "type": "bool"
     },
     { "name": "Make good<br>alliance partner?",
       "tooltip": "Would you want this robot on your alliance in eliminations?",
