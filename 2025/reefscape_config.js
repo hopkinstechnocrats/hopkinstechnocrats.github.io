@@ -158,9 +158,17 @@ var config_data = `
     }
   ],
   "endgame": [
-    { "name": "Barge Timer",
-      "code": "ebt",
+    { "name": "Climb Time",
+      "code": "ct",
       "type": "timer"
+    },
+    { "name": "Did the team take extra to climb",
+    "code": "Did the team take extra to climb",
+    "type": "bool"
+    },
+    { "name": "Was there extra time after a sucessful climb",
+    "code": "Was there extra time after a sucessful climb", 
+    "type": "bool"
     },
     { "name": "Final Robot Status",
       "code": "efs",
@@ -188,10 +196,8 @@ var config_data = `
       "code": "DefenseRatingInMatch",
       "type": "radio",
       "choices": {
-        "5": "5(Very Effective)",
-        "4": "4<br>",
-        "3": "3(Average)<br>",
-        "2": "2<br>",
+        "3": "3(Very Effective)",
+        "2": "2(Average)<br>",
         "1": "1(Not Effective)<br>",
         "0": "0(Not Observed)<br>"
       },
@@ -201,10 +207,8 @@ var config_data = `
     "code": "DriverSkillInMatch",
     "type": "radio",
     "choices": {
-      "5": "5(Very Effective)",
-      "4": "4<br>",
-      "3": "3(Average)<br>",
-      "2": "2<br>",
+      "3": "3(Very Effective)",
+      "2": "2(Average)<br>",
       "1": "1(Not Effective)<br>",
       "0": "0(Not Observed)<br>"
     },
