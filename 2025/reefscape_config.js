@@ -160,7 +160,7 @@ var config_data = `
     "code": "Coral Dropped",
     "type": "counter"
     },
-  ],
+  ]
   "endgame": [
     { "name": "Climb Time",
       "code": "ct",
