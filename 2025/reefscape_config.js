@@ -69,20 +69,20 @@ var config_data = `
       "code": "al",
       "type": "bool"
     },
-    { "name": "Coral L1",
-      "code": "ac1",
-      "type": "counter"
-    },
-    { "name": "Coral L2",
-      "code": "ac2",
+    { "name": "Coral L4",
+      "code": "ac4",
       "type": "counter"
     },
     { "name": "Coral L3",
       "code": "ac3",
       "type": "counter"
     },
-    { "name": "Coral L4",
-      "code": "ac4",
+    { "name": "Coral L2",
+      "code": "ac2",
+      "type": "counter"
+    },
+    { "name": "Coral L1",
+      "code": "ac1",
       "type": "counter"
     },
     { "name": "Processor Score",
@@ -102,30 +102,32 @@ var config_data = `
       "type": "radio",
       "choices": {
         "f": "Floor<br>",
+        "cs": "Coral Station<br>",
+        "b": "Both<br>",
         "x": "Not Attempted"
       },
       "defaultValue": "x" 
     },
-    { "name": "Removed Algae",
+    { "name": "Algae Removed",
       "code": "AlgaeRemovedAuto",
       "type": "counter"
     }
   ],
   "teleop": [
-    { "name": "Coral L1",
-      "code": "tc1",
-      "type": "counter"
-    },
-    { "name": "Coral L2",
-      "code": "tc2",
+    { "name": "Coral L4",
+      "code": "tc4",
       "type": "counter"
     },
     { "name": "Coral L3",
       "code": "tc3",
       "type": "counter"
     },
-    { "name": "Coral L4",
-      "code": "tc4",
+    { "name": "Coral L2",
+      "code": "tc2",
+      "type": "counter"
+    },
+    { "name": "Coral L1",
+      "code": "tc1",
       "type": "counter"
     },
     { "name": "Processor Score",
@@ -153,12 +155,24 @@ var config_data = `
     { "name": "Algae Removed",
       "code": "AlgaeRemovedTeleop",
       "type": "counter"
-    }
+    },
+    { "name": "Coral Dropped",
+    "code": "Coral Dropped",
+    "type": "counter"
+    },
   ],
   "endgame": [
-    { "name": "Barge Timer",
-      "code": "ebt",
+    { "name": "Climb Time",
+      "code": "ct",
       "type": "timer"
+    },
+    { "name": "Did the team take extra to climb",
+    "code": "Did the team take extra to climb",
+    "type": "bool"
+    },
+    { "name": "Was there extra time after a sucessful climb",
+    "code": "Was there extra time after a sucessful climb", 
+    "type": "bool"
     },
     { "name": "Final Robot Status",
       "code": "efs",
@@ -186,10 +200,8 @@ var config_data = `
       "code": "DefenseRatingInMatch",
       "type": "radio",
       "choices": {
-        "5": "5(Very Effective)",
-        "4": "4<br>",
-        "3": "3(Average)<br>",
-        "2": "2<br>",
+        "3": "3(Very Effective)",
+        "2": "2(Average)<br>",
         "1": "1(Not Effective)<br>",
         "0": "0(Not Observed)<br>"
       },
@@ -199,10 +211,8 @@ var config_data = `
     "code": "DriverSkillInMatch",
     "type": "radio",
     "choices": {
-      "5": "5(Very Effective)",
-      "4": "4<br>",
-      "3": "3(Average)<br>",
-      "2": "2<br>",
+      "3": "3(Very Effective)",
+      "2": "2(Average)<br>",
       "1": "1(Not Effective)<br>",
       "0": "0(Not Observed)<br>"
     },
@@ -216,9 +226,9 @@ var config_data = `
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Dropped Coral (>2)",
-      "code": "dc",
-      "type": "bool"
+    { "name": "Were cages hit",
+    "code": "Were cages hit",
+    "type": "bool"
     },
     { "name": "Make good<br>alliance partner?",
       "tooltip": "Would you want this robot on your alliance in eliminations?",
