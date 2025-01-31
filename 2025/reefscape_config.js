@@ -66,39 +66,39 @@ var config_data = `
   ],
   "auton": [
     { "name": "Leave Start",
-      "code": "al",
+      "code": "AutoLeaveStart",
       "type": "bool"
     },
     { "name": "Coral L4",
-      "code": "ac4",
+      "code": "AutoCoralL4Scores",
       "type": "counter"
     },
     { "name": "Coral L3",
-      "code": "ac3",
+      "code": "AutoCoralL3Scores",
       "type": "counter"
     },
     { "name": "Coral L2",
-      "code": "ac2",
+      "code": "AutoCoralL2Scores",
       "type": "counter"
     },
     { "name": "Coral L1",
-      "code": "ac1",
+      "code": "AutoCoralL1Scores",
       "type": "counter"
     },
     { "name": "Processor Scores",
-      "code": "aps",
+      "code": "AutoProcessorScores",
       "type": "counter"
     },
     { "name": "Net Scores",
-      "code": "ans",
+      "code": "AutoNetScore",
       "type": "counter"
     },
     { "name": "Net Misses",
-      "code": "anm",
+      "code": "AutoNetMisses",
       "type": "counter"
     },
     { "name": "Pickup Method",
-      "code": "apu",
+      "code": "AutoPickupMethod",
       "type": "radio",
       "choices": {
         "f": "Floor<br>",
@@ -109,41 +109,41 @@ var config_data = `
       "defaultValue": "x" 
     },
     { "name": "Algae Removed",
-      "code": "AlgaeRemovedAuto",
+      "code": "AutoAlgaeRemoved",
       "type": "counter"
     }
   ],
   "teleop": [
     { "name": "Coral L4",
-      "code": "tc4",
+      "code": "TeleopCoralL4Scores",
       "type": "counter"
     },
     { "name": "Coral L3",
-      "code": "tc3",
+      "code": "TeleopCoralL3Scores",
       "type": "counter"
     },
     { "name": "Coral L2",
-      "code": "tc2",
+      "code": "TeleopCoralL2Scores",
       "type": "counter"
     },
     { "name": "Coral L1",
-      "code": "tc1",
+      "code": "TeleopCoralL1Scores",
       "type": "counter"
     },
     { "name": "Processor Scores",
-      "code": "tps",
+      "code": "TeleopProcessorScores",
       "type": "counter"
     },
     { "name": "Net Scores",
-      "code": "tns",
+      "code": "TeleopNetScores",
       "type": "counter"
     },
     { "name": "Net Misses",
-      "code": "tnm",
+      "code": "TeleopNetMisses",
       "type": "counter"
     },
     { "name": "Pickup Method",
-      "code": "tpu",
+      "code": "TeleopPickupMethod",
       "type": "radio",
       "choices": {
         "s": "Coral Station<br>",
@@ -153,7 +153,7 @@ var config_data = `
       }
     },
     { "name": "Algae Removed",
-      "code": "AlgaeRemovedTeleop",
+      "code": "TeleopAlgaeRemoved",
       "type": "counter"
     },
     { "name": "Coral Dropped",
@@ -163,19 +163,19 @@ var config_data = `
   ],
   "endgame": [
     { "name": "Time to Climb",
-      "code": "ct",
+      "code": "TimeToClimb",
       "type": "timer"
     },
     { "name": "More than 5s to Position Climb",
-    "code": "More than 5s to Position Climb",
+    "code": "MoreThan5sToPositionClimb",
     "type": "bool"
     },
     { "name": "Time Left After Climbing?",
-    "code": "Time Left After Climbing", 
+    "code": "TimeLeftAfterClimbing", 
     "type": "bool"
     },
     { "name": "Final Robot Status",
-      "code": "efs",
+      "code": "FinalRobotStatus",
       "type":"radio",
       "choices": {
         "bp": "Parked<br>",
@@ -189,15 +189,15 @@ var config_data = `
   ],
   "postmatch": [
     { "name": "Gained CP?",
-      "code": "cop",
+      "code": "GainedCP",
       "type": "bool"
     },
     {"name": "Defense Bot?",
-      "code": "Defense Bot",
+      "code": "DefenseBot",
       "type": "bool"
     },
     { "name": "Defense Rating",
-      "code": "DefenseRatingInMatch",
+      "code": "DefenseRating",
       "type": "radio",
       "choices": {
         "3": "3(Very Effective)",
@@ -208,7 +208,7 @@ var config_data = `
       "defaultValue": "0"
     },
     { "name": "Driver Skill",
-    "code": "DriverSkillInMatch",
+    "code": "DriverSkill",
     "type": "radio",
     "choices": {
       "3": "3(Very Effective)",
@@ -219,7 +219,7 @@ var config_data = `
     "defaultValue": "0"
   },
     { "name": "Died/Immobilized",
-      "code": "die",
+      "code": "Died/Immobilized",
       "type": "bool"
     },
     { "name": "Unstable?",
@@ -227,16 +227,16 @@ var config_data = `
       "type": "bool"
     },
     { "name": "Were cages hit?",
-    "code": "Were cages hit",
+    "code": "WereCagesHit",
     "type": "bool"
     },
     { "name": "Make good<br>alliance partner?",
       "tooltip": "Would you want this robot on your alliance in eliminations?",
-      "code": "all",
+      "code": "MakeGoodAlliancePartner",
       "type": "bool"
     },
     { "name": "Comments",
-      "code": "co",
+      "code": "Comments",
       "type": "text",
       "size": 15,
       "maxSize": 220
