@@ -90,7 +90,7 @@ var config_data = `
       "type": "counter"
     },
     { "name": "Net Scores",
-      "code": "AutoNetScore",
+      "code": "AutoNetScores",
       "type": "counter"
     },
     { "name": "Net Misses",
@@ -157,7 +157,7 @@ var config_data = `
       "type": "counter"
     },
     { "name": "Coral Dropped",
-    "code": "Coral Dropped",
+    "code": "CoralDropped",
     "type": "counter"
     }
   ],
