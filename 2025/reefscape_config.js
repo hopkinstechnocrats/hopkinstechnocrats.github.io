@@ -24,7 +24,7 @@ var config_data = `
       "choices": {
         "pm": "Practice<br>",
         "qm": "Quals<br>",
-        "sf": "Semi-Finals<br>"
+        "sf": "Semi-Finals<br>",
         "f": "Finals"
       },
       "defaultValue": "qm",
