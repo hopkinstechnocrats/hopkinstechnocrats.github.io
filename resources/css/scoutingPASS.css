@@ -114,7 +114,7 @@ html, body{
 }
 
 h1{
-    font-family: Alexis;
+    font-family: Verdana;
     text-align: center;
     border-style: groove;
     border-color: white;
@@ -129,7 +129,7 @@ h1{
 }
 
 h2{
-    font-family: Alexis;
+    font-family: Verdana;
     text-align: center;
     font-size: 24px;
     font-weight: 300;
@@ -161,7 +161,7 @@ h2{
 
 
 #nextButton1{
-    font-family: Alexis;
+    font-family: Verdana;
     font-size: 24px;
     padding: 40px 40px;
     background-color: rgb(151, 199, 240);
@@ -169,7 +169,7 @@ h2{
     display: inline-block;
 }
 #nextButton2, #nextButton3, #nextButton4, #nextButton5, #nextButton6, #nextButton7, #nextButton8, #nextButton9, #nextButton10{
-    font-family: Alexis;
+    font-family: Verdana;
     font-size: 24px;
     padding: 40px 20px;
     background-color: rgb(151, 199, 240);
@@ -179,7 +179,7 @@ h2{
 }
 
 #prevButton1, #prevButton2, #prevButton3, #prevButton4, #prevButton5, #prevButton6, #prevButton7, #prevButton8, #prevButton10{
-    font-family: Alexis;
+    font-family: Verdana;
     font-size: 24px;
     padding: 40px 20px;
     background-color: lightgrey;
@@ -189,7 +189,7 @@ h2{
 }
 
 #prevButton9{
-    font-family: Alexis;
+    font-family: Verdana;
     font-size: 20px;
     padding: 20px 20px;
     background-color: lightgrey;
@@ -198,7 +198,7 @@ h2{
 }
 
 .submitForm, #displayButton, #copyButton {
-    font-family: Alexis;
+    font-family: Verdana;
     font-size: 20px;
     padding: 20px 20px;
     background-color: lightgrey;
@@ -207,7 +207,7 @@ h2{
 }
 
 .clearForm{
-    font-family: Alexis;
+    font-family: Verdana;
     font-size: 24px;
     padding: 40px 20px;
     background-color:rgb(151, 199, 240);
@@ -216,7 +216,7 @@ h2{
 }
 
 .undoButton, .flipButton {
-    font-family: Alexis;
+    font-family: Verdana;
     font-size: 24px;
     background-color: black;
     padding: 40px 20px;
@@ -226,19 +226,19 @@ h2{
 
 
 #prematch_table{
-    font: Alexis;
+    font: Verdana;
     text-align: center;
 }
 
 
 h1 .odd {
-    font-family: Alexis;
+    font-family: Verdana;
     text-align: center;
     color: #0AB4EC;
 }
 
 h1 .even {
-    font-family: Alexis;
+    font-family: Verdana;
     text-align: center;
     color: #42B333;
 }
