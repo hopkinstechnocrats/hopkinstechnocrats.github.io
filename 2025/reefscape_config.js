@@ -8,8 +8,8 @@ var config_data = `
     { "name": "Scouter Initials",
       "code": "s",
       "type": "scouter",
-      "size": 5,
-      "maxSize": 5,
+      "size": 7,
+      "maxSize": 7,
       "required": "true"
     },
     { "name": "Event Code",
