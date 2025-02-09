@@ -231,11 +231,6 @@ var config_data = `
     "code": "WereCagesHit",
     "type": "bool"
     },
-    { "name": "Make good<br>alliance partner?",
-      "tooltip": "Would you want this robot on your alliance in eliminations?",
-      "code": "MakeGoodAlliancePartner",
-      "type": "bool"
-    },
     { "name": "Comments",
       "code": "Comments",
       "type": "text",
