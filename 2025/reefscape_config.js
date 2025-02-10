@@ -151,7 +151,8 @@ var config_data = `
         "f": "Floor<br>",
         "b": "Both<br>",
         "x": "Not Attempted"
-      }
+      },
+      "defaultValue": "x" 
     },
     { "name": "Algae Removed",
       "code": "TeleopAlgaeRemoved",
