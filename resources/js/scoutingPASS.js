@@ -23,7 +23,7 @@ var options = {
 };
 
 // Built from the JSON
-var requiredFields = []; //["e", "m", "l", "r", "s", "as"];
+var requiredFields = []; //["e", "m", "l", "r", "s"];
 
 function addTimer(table, idx, name, data) {
   var row = table.insertRow(idx);
