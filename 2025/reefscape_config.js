@@ -127,7 +127,7 @@ var config_data = `
     { "name": "Algae Removed",
       "code": "TeleopAlgaeRemoved",
       "type": "counter"
-    },
+    }
   ],
   "endgame": [
     { "name": "More than 5s to Position Climb",
