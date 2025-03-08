@@ -93,7 +93,7 @@ var config_data = `
     { "name": "Algae Removed",
       "code": "AutoAlgaeRemoved",
       "type": "counter"
-    },
+    }
   ],
   "teleop": [
     { "name": "Coral L4",
