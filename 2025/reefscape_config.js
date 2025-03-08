@@ -55,14 +55,6 @@ var config_data = `
       "type": "team",
       "min": 1,
       "max": 99999
-    },
-    { "name": "Auto Start Position",
-      "code": "as",
-      "type": "clickable_image",
-      "filename": "2025/field_image.png",
-      "clickRestriction": "one",
-      "allowableResponses": "6 7 18 19 30 31 42 43 54 55 66 67",
-      "shape": "circle 5 black red true"
     }
   ],
   "auton": [
@@ -86,33 +78,22 @@ var config_data = `
       "code": "AutoCoralL1Scores",
       "type": "counter"
     },
-    { "name": "Processor Scores",
-      "code": "AutoProcessorScores",
+    { "name": "Dropped Coral",
+      "code": "AutoDroppedCoral",
       "type": "counter"
     },
-    { "name": "Net Scores",
+    { "name": "Algae Net Scores",
       "code": "AutoNetScores",
       "type": "counter"
     },
-    { "name": "Net Misses",
-      "code": "AutoNetMisses",
+    { "name": "Algae Processor Scores",
+      "code": "AutoProcessorScores",
       "type": "counter"
-    },
-    { "name": "Pickup Method",
-      "code": "AutoPickupMethod",
-      "type": "radio",
-      "choices": {
-        "f": "Floor<br>",
-        "cs": "Coral Station<br>",
-        "b": "Both<br>",
-        "x": "Not Attempted"
-      },
-      "defaultValue": "x" 
     },
     { "name": "Algae Removed",
       "code": "AutoAlgaeRemoved",
       "type": "counter"
-    }
+    },
   ],
   "teleop": [
     { "name": "Coral L4",
@@ -131,43 +112,24 @@ var config_data = `
       "code": "TeleopCoralL1Scores",
       "type": "counter"
     },
-    { "name": "Processor Scores",
-      "code": "TeleopProcessorScores",
+    { "name": "Coral Dropped",
+      "code": "TeleopCoralDropped",
       "type": "counter"
     },
-    { "name": "Net Scores",
+    { "name": "Algae Net Scores",
       "code": "TeleopNetScores",
       "type": "counter"
     },
-    { "name": "Net Misses",
-      "code": "TeleopNetMisses",
-      "type": "counter"
-    },
-    { "name": "Pickup Method",
-      "code": "TeleopPickupMethod",
-      "type": "radio",
-      "choices": {
-        "s": "Coral Station<br>",
-        "f": "Floor<br>",
-        "b": "Both<br>",
-        "x": "Not Attempted"
+    { "name": "Algae Processor Scores",
+      "code": "TeleopProcessorScores",
+      "type": "Counter"
       },
-      "defaultValue": "x" 
-    },
     { "name": "Algae Removed",
       "code": "TeleopAlgaeRemoved",
       "type": "counter"
     },
-    { "name": "Coral Dropped",
-    "code": "CoralDropped",
-    "type": "counter"
-    }
   ],
   "endgame": [
-    { "name": "Time to Climb",
-      "code": "TimeToClimb",
-      "type": "timer"
-    },
     { "name": "More than 5s to Position Climb",
     "code": "MoreThan5sToPositionClimb",
     "type": "bool"
@@ -178,7 +140,7 @@ var config_data = `
     },
     { "name": "Final Robot Status",
       "code": "FinalRobotStatus",
-      "type":"radio",
+      "type": "radio",
       "choices": {
         "bp": "Parked<br>",
         "ba": "Failed Climb<br>",
@@ -190,10 +152,10 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Gained CP?",
-      "code": "GainedCP",
+    { "name": "Ground Pickup",
+      "code": "GroundPickup",
       "type": "bool"
-    },
+      },
     {"name": "Defense Bot?",
       "code": "DefenseBot",
       "type": "bool"
@@ -227,10 +189,6 @@ var config_data = `
     { "name": "Unstable?",
       "code": "Unstable",
       "type": "bool"
-    },
-    { "name": "Were cages hit?",
-    "code": "WereCagesHit",
-    "type": "bool"
     },
     { "name": "Comments",
       "code": "Comments",
