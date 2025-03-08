@@ -2,7 +2,7 @@ var config_data = `
 {
   "dataFormat": "tsv",
   "title": "Scouting PASS 2025",
-  "page_title": "reefscape",
+  "page_title": "REEFSCAPE",
   "checkboxAs": "10",
   "prematch": [
     { "name": "Scouter Initials",
@@ -123,7 +123,7 @@ var config_data = `
     { "name": "Algae Processor Scores",
       "code": "TeleopProcessorScores",
       "type": "counter"
-    }
+    },
     { "name": "Algae Removed",
       "code": "TeleopAlgaeRemoved",
       "type": "counter"

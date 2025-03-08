@@ -163,7 +163,7 @@ h2{
 #nextButton1{
     font-family: Verdana;
     font-size: 24px;
-    padding: 40px 40px;
+    padding: 15px 40px;
     background-color: rgb(151, 199, 240);
     text-decoration: none;
     display: inline-block;
@@ -171,7 +171,7 @@ h2{
 #nextButton2, #nextButton3, #nextButton4, #nextButton5, #nextButton6, #nextButton7, #nextButton8, #nextButton9, #nextButton10{
     font-family: Verdana;
     font-size: 24px;
-    padding: 40px 20px;
+    padding: 15px 40px;
     background-color: rgb(151, 199, 240);
     color:black;
     text-decoration: none;
@@ -181,7 +181,7 @@ h2{
 #prevButton1, #prevButton2, #prevButton3, #prevButton4, #prevButton5, #prevButton6, #prevButton7, #prevButton8, #prevButton10{
     font-family: Verdana;
     font-size: 24px;
-    padding: 40px 20px;
+    padding: 15px 40px;
     background-color: lightgrey;
     color: black;
     text-decoration: none;
@@ -191,7 +191,7 @@ h2{
 #prevButton9{
     font-family: Verdana;
     font-size: 20px;
-    padding: 20px 20px;
+    padding: 15px 40px;
     background-color: lightgrey;
     text-decoration: none;
     display: inline-block;
@@ -200,7 +200,7 @@ h2{
 .submitForm, #displayButton, #copyButton {
     font-family: Verdana;
     font-size: 20px;
-    padding: 20px 20px;
+    padding: 15px 40px;
     background-color: lightgrey;
     text-decoration: none;
     display: inline-block;
@@ -209,7 +209,7 @@ h2{
 .clearForm{
     font-family: Verdana;
     font-size: 24px;
-    padding: 40px 20px;
+    padding: 15px 40px;
     background-color:rgb(151, 199, 240);
     text-decoration: none;
     display: inline-block;
@@ -219,7 +219,7 @@ h2{
     font-family: Verdana;
     font-size: 24px;
     background-color: black;
-    padding: 40px 20px;
+    padding: 15px 40px;
     color: white;
     margin-left: 20px;
 }
