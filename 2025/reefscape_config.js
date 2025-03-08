@@ -121,7 +121,7 @@ var config_data = `
       "type": "counter"
     },
     { "name": "Algae Processor Scores",
-      "code": "TeleopProcessorScores",
+      "code": "TeleProcessorScores",
       "type": "Counter"
       },
     { "name": "Algae Removed",
