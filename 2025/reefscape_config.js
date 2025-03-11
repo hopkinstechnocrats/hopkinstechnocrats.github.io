@@ -78,7 +78,7 @@ var config_data = `
       "code": "AutoCoralL1Scores",
       "type": "counter"
     },
-    { "name": "Dropped Coral",
+    { "name": "Coral Dropped",
       "code": "AutoDroppedCoral",
       "type": "counter"
     },
