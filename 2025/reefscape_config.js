@@ -79,7 +79,7 @@ var config_data = `
       "type": "counter"
     },
     { "name": "Coral Dropped",
-      "code": "AutoDroppedCoral",
+      "code": "AutoCoralDropped",
       "type": "counter"
     },
     { "name": "Algae Net Scores",
