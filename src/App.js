@@ -1,21 +1,24 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
-import Counter from './components/Counter'
-
+import Counter from './components/Counter';
 const App = () => {
   return (
-    <Counter title="Autonomous">
-    <div className="Question1">
-      <header className="ScoutingForm">
-        <p>
-          L1 Coral
-        </p>
-        <p>
-          L2 Coral
-        </p>
-      </header>
+    <>
+      <h1>
+      Autonomous
+      </h1>
+      
+    <div className="App">
+      <Counter/>
     </div>
-    </Counter>
+    <div>
+        <input type="checkbox" id ="checkbox"></input>
+        <label htmlFor ="checkbox">Leave Start?</label>
+    </div>
+    <div>
+      <input type="text"/>
+    </div>
+    </>
   );
 }
 
