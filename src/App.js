@@ -3,7 +3,7 @@ import React from 'react'
 function FormToSheet() {
     const handleSubmit =(e)=>{
         e.preventDefault()
-        const url = "https://script.google.com/macros/s/AKfycbyk0K9es9VTZGb8kAiQupm_QV3E6PBBkdNHkU5hN44zujUPEAy2O7UC67_txI1HpJMr/exec"
+        const url = "https://script.google.com/macros/library/d/1YdArv73uzwUk80aAux287mac1jnzFhU9Jpda2aQkmP5oei9l4jzz8Nou/1"
         fetch(url,{
         method:"POST",
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
