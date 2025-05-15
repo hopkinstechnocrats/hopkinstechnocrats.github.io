@@ -1,7 +1,10 @@
 import React from 'react'
 
 function FormToSheet() {
-    const handleSubmit =(e)=>{
+  // headers: ( "Content-Type": "application/x-www-form-urlencoded" ),
+
+  //"https://script.google.com/macros/s/AKfycbyk0K9es9VTZGb8kAiQupm_QV3E6PBBkdNHkU5hN44zujUPEAy2O7UC67_txI1HpJMr/exec"
+  const handleSubmit =(e)=>{
         e.preventDefault()
         const url = "https://script.google.com/macros/s/AKfycbyk0K9es9VTZGb8kAiQupm_QV3E6PBBkdNHkU5hN44zujUPEAy2O7UC67_txI1HpJMr/exec"
         fetch(url,{
@@ -17,8 +20,8 @@ return(
 <div>
         <h1>React to sheet</h1>
         <form onSubmit={handleSubmit}>
-        <input name='name' placeholder='Name 1' /><br/>
-        <input name='email' placeholder='Email 1'/><br/>
+        <input name='name' placeholder='Name' /> <br/>
+        <input name='email' placeholder='Email'/> <br/>
         <button>Add</button>
     </form>
 </div>
