@@ -1,27 +1,34 @@
-import React from 'react'
-import './App.css';
-import { QRCode } from 'react-qrcode-logo';
-const App = () => {
+import React, { useState } from 'react';
+import QRCode from 'react-qr-code';
+
+function App() {
+  const [text, setText] = useState('');
+  const [checkBox, setCheckBox] = useState(false);
+  const [counter, setCounter] = useState(0)
+
+  const qrValue = `${text} \t ${checkBox} \t ${counter}`;
   return (
-    <>
+    <div>
       <h1>
-      Autonomous
+        Autonomous
       </h1>
-      
-    <input type="counter" id ="counter"></input>
-    <label htmlFor ="counter">L4</label>
-    <div>
-        <input type="checkbox" id ="checkbox"></input>
-        <label htmlFor ="checkbox">Leave Start?</label>
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />      
+      <input
+        type="checkBox"
+        checked={checkBox}
+        onChange={(e) => setCheckBox(e.target.checked)}
+      />
+        <input
+        type="number"
+        value={counter}
+        onChange={(e) => setCounter(Number(e.target.value))}
+    />
+      <QRCode value={qrValue}/>
     </div>
-    <div>
-      <input type="text" id ="text"></input>
-      <label htmlFor ="text">Comments</label>
-    </div>
-    <QRCode value="this is data"/>
-    <div>
-    </>
   );
 }
-
 export default App;
