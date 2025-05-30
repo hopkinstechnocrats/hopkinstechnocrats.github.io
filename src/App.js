@@ -30,7 +30,7 @@ function App() {
         checked={checkBox}
         onChange={(e) => setCheckBox(e.target.checked)}
       />
-      Include option
+      This text has changed
       </label>
       <div>
         <button onClick={handleDecrement} disabled={counter <= 0}>-</button>
