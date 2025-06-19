@@ -15,8 +15,7 @@
   },
   "scripts": {
     "predeploy": "...",
-    "deploy": "...",
-    "start": "start"
+    "deploy": "..."
   },
   "eslintConfig": {
     "extends": [
