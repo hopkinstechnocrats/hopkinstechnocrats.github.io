@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import QRCode from 'react-qr-code';
 import './App.css';
+import Textbox from './components/Textbox.js'
 
 function App() {
   const [text, setText] = useState('');
@@ -17,8 +18,10 @@ function App() {
         Autonomous
       </h1>
       <div>
-      <input
+      <Textbox
+        label="Text"
         type="text"
+        placeholder="Enter you comment"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
