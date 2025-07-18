@@ -1,6 +1,6 @@
 import react from 'react';
 
-export default function CounterInput({ value, setValue}) {
+export default function Counter({ value, setValue}) {
     const increment = () => setValue((prev) => prev +1)
     const decrement = () => setValue((prev) => Math.max(prev - 1, 0));
 
