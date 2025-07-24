@@ -7,7 +7,6 @@ export default function Textbox({ label, value, onChange, placeholder }){
     type="text"
     value={value}
     onChange={onChange}
-    placeholder={placeholder}
     />
     </label>
     );
