@@ -13,36 +13,34 @@ function App() {
     quantity: 0,
   });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const payload = {
-      name: formData.name,
-      comment: formData.comment,
-      agreed: formData.agreed,
-      quantity: formData.quantity,
-    };
-
-    try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbx3ZYTi5jUAO8dT306vKyfgvkELwZhskgV_Org0YG7RM1lNgk-FKPEdEckuCroiBHfO-A/exec", {
-        method: "POST",
-        body: JSON.stringify(payload),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      const result = await response.json();
-      if (result.result === "success") {
-        alert("Data submitted to Google Sheets!");
-      } else {
-        alert("Submission failed.");
-      }
-    } catch (error) {
-      console.error("Submit error:", error);
-      alert("Error submitting.");
-    }
+  const payload = {
+    name: formData.name,
+    comment: formData.comment,
+    agreed: formData.agreed,
+    quantity: formData.quantity,
   };
+
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbx3ZYTi5jUAO8dT306vKyfgvkELwZhskgV_Org0YG7RM1lNgk-FKPEdEckuCroiBHfO-A/exec", {
+      method: "POST",
+      mode: "no-cors", // required due to Google Sheets CORS policy
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    alert("Submitted! (Data sent to Google Sheets)");
+  } catch (error) {
+    console.error("Submit error:", error);
+    alert("Error submitting.");
+  }
+};
+
+
 
   const qrValue = `${formData.name} \t ${formData.comment} \t ${formData.agreed} \t ${formData.quantity}`;
 
