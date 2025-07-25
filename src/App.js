@@ -5,26 +5,6 @@ import Textbox from './components/Textbox';
 import Checkbox from './components/Checkbox';
 import CounterInput from './components/CounterInput';
 
-function doPost(e) {
-  try {
-    var data = JSON.parse(e.postData.contents);
-    Logger.log(data);
-
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
-    sheet.appendRow([data.name, data.comment, data.agreed, data.quantity]);
-
-    return ContentService.createTextOutput(
-      JSON.stringify({ result: "success" })
-    ).setMimeType(ContentService.MimeType.JSON);
-  } catch (error) {
-    Logger.log("Error: " + error);
-    return ContentService.createTextOutput(
-      JSON.stringify({ result: "error", message: error.toString() })
-    ).setMimeType(ContentService.MimeType.JSON);
-  }
-}
-
-
 function App() {
   const [formData, setFormData] = useState({
     name: '',
