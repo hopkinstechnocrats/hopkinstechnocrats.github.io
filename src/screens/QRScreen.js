@@ -14,7 +14,6 @@ export default function QRScreen() {
     <div>
       <h1>QR Code</h1>
       <QRCode value={qrValue} />
-      <pre>{qrValue}</pre>
     </div>
   );
 }

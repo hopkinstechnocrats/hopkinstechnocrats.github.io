@@ -8,11 +8,11 @@ export default function CounterInput({ value, setValue}) {
         <div>
         <button onClick={decrement} disabled={value <= 0}>-</button>
         <input
-        type="number"
+        type="button"
         value={value}
         onChange={(e) => setValue(Number(e.target.value))}
         />
-        <button onClick={increment}>+</button>
+        <button type="button" onClick={increment}>+</button>
         </div>
     );
 }
