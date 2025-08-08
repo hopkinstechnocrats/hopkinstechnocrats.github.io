@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import QRCode from 'react-qr-code';
-import './App.css';
-import Textbox from './components/Textbox';
-import Checkbox from './components/Checkbox';
-import CounterInput from './components/CounterInput';
+import React, {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import FormContext from './screens/FormContext';
+import HomeScreen from './screens/HomeScreen';
+import SubmitScreen from './screens/SubmitScreen';
+import QRScreen from './screens/QRScreen';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -12,90 +12,29 @@ function App() {
     agreed: false,
     quantity: 0,
   });
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  const payload = {
-    name: formData.name,
-    comment: formData.comment,
-    agreed: formData.agreed,
-    quantity: formData.quantity,
-  };
-
-  try {
-    await fetch("https://script.google.com/macros/s/AKfycbx3ZYTi5jUAO8dT306vKyfgvkELwZhskgV_Org0YG7RM1lNgk-FKPEdEckuCroiBHfO-A/exec", {
-      method: "POST",
-      mode: "no-cors", // required due to Google Sheets CORS policy
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    });
-
-    alert("Submitted! (Data sent to Google Sheets)");
-  } catch (error) {
-    console.error("Submit error:", error);
-    alert("Error submitting.");
-  }
-};
-
-
-
-  const qrValue = `${formData.name} \t ${formData.comment} \t ${formData.agreed} \t ${formData.quantity}`;
-
   return (
-    <div className="App">
-      <h1>Autonomous</h1>
+    <FormContext.Provider value={{ formData, setFormData }}>
+    <Router>
+      <div className="App">
+        <nav>
+          <Link to="/">Home</Link> |{" "}
+          <Link to="/submit">Submit</Link> |{" "}
+          <Link to="/qr">QR Code</Link>
+        </nav>
 
-      <div className="input-group">
-        <Textbox
-          label="Name"
-          value={formData.name}
-          onChange={(e) =>
-            setFormData({ ...formData, name: e.target.value })
-          }
-        />
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/submit" element={<SubmitScreen />} />
+          <Route path="/qr" element={<QRScreen />} />
+        </Routes>
       </div>
-
-      <div className="input-group">
-        <Textbox
-          label="Comment"
-          value={formData.comment}
-          onChange={(e) =>
-            setFormData({ ...formData, comment: e.target.value })
-          }
-        />
-      </div>
-
-      <div className="input-group">
-        <Checkbox
-          label="Agree to Terms"
-          checked={formData.agreed}
-          onChange={(e) =>
-            setFormData({ ...formData, agreed: e.target.checked })
-          }
-        />
-      </div>
-
-      <div className="input-group">
-        <CounterInput
-          value={formData.quantity}
-          setValue={(value) =>
-            setFormData({ ...formData, quantity: value })
-          }
-        />
-      </div>
-
-      <div className="qr-code">
-        <QRCode value={qrValue} />
-      </div>
-
-      <form onSubmit={handleSubmit}>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    </Router>
+    </FormContext.Provider>
   );
 }
 
 export default App;
+
+
+
+
