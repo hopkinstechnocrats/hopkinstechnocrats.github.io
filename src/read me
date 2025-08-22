@@ -1,4 +1,4 @@
 Working:
 Multiple pages, direct submit, QR code, 3 different types of prompts, data is saved when navigating between pages, clear page button
 Not working:
-Page clear will likely only clear the information in the "Submit" Page
+Page clear will likely only clear the information in the "Submit" Page, when reloading the web app when on any page other then "home" causes an error (because going to a different page causes the URL to change, and GitHub only hosts one URL, the one that leads to the Home page)
